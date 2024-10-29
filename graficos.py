@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from plotly import data
+import plotly.express as px
 
 st.set_page_config(page_title="Análise IA Stilingue", page_icon=":bar_chart:", layout="wide")
 
@@ -73,7 +74,7 @@ with col1:
 
 with col2:
      # Dados de exemplo
-    labels = ['Não Utilizadas', 'Utilizadas']
+    labels = ['Utilizadas', 'Não Utilizadas']
     if escolha == "GPT-4o":
         values = [132, 58]
     else:
@@ -82,7 +83,7 @@ with col2:
     # Criando o gráfico de pizza
     fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
     
-    fig.update_traces(marker=dict(colors=['gold', 'lightgreen'], 
+    fig.update_traces(marker=dict(colors=['lightgreen','gold'], 
                               line=dict(color='#000000', width=2)))
 
     fig.update_layout(title='Tags Disponíveis x Utilizadas')
@@ -97,24 +98,37 @@ with col2:
     st.plotly_chart(fig)
 
 
+if escolha == "GPT-4o":
+    df = pd.DataFrame(columns=['Redes Sociais', 'Quantidade de acertos', 'Quantidade de erros'])
+    df.loc[0] = ['Instagram', 80, 52]
+    df.loc[1] = ['Facebook', 10, 18]
+    df.loc[2] = ['Twitter', 9, 10]
+    df.loc[3] = ['Youtube', 7, 4]
+    df.loc[4] = ['Portais', 1, 1]
+else:
+    df = pd.DataFrame(columns=['Redes Sociais', 'Quantidade de acertos', 'Quantidade de erros'])
+    df.loc[0] = ['Instagram', 90, 42]
+    df.loc[1] = ['Facebook', 15, 13]
+    df.loc[2] = ['Twitter', 12, 7]
+    df.loc[3] = ['Youtube', 10, 1]
+    df.loc[4] = ['Portais', 1, 1]
 
-# Gráfico de barras
-redes = ["Instagram", "Twitter", "Facebook", "Youtube", "Portais"]
-totais = [132, 28, 19, 11, 2]
-
-# Criar gráfico interativo de barras
-fig = go.Figure([go.Bar(x=redes, y=totais, marker=dict(cornerradius=30))])
-
-# Título e rótulos
-fig.update_layout(
-    title='De quais redes sociais foram coletados os comentários?',
-    xaxis_title='',
-    yaxis_title='',
-    template='plotly_white'
-
+fig = go.Figure(
+    data=[
+        go.Bar(x=df['Redes Sociais'], y=df['Quantidade de acertos'], name="Acertos"),
+        go.Bar(x=df['Redes Sociais'], y=df['Quantidade de erros'], name="Erros"),
+    ],
+    layout=dict(
+        barcornerradius=15,
+        title='Quantidade de acertos e erros por rede social',
+        colorway=['#90EE90','#FFD700'],
+    ),
 )
 
 st.plotly_chart(fig)
+
+
+# Criar uma tabela com as tags em que a IA acertou mais parecido com o humano
 
 
 
