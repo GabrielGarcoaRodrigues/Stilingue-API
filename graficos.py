@@ -25,7 +25,7 @@ st.markdown(
 )
 
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns(2, vertical_alignment="top")
 
 with col1:
     st.write("# Análise IA Stilingue")
