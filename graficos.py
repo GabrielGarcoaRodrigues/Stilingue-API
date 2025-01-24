@@ -32,7 +32,8 @@ with col1:
 
 
 with col2:
-    st.write(" ")
+    st.image("sunrise.jpg", caption="Sunrise by the mountains")
+
 
 
 col1, col2 = st.columns([1,4])
