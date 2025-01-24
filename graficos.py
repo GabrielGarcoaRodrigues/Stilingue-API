@@ -32,7 +32,7 @@ with col1:
 
 
 with col4:
-    st.image("LOGO.png", width=200)
+    st.image("LOGO.png", width=180)
 
 
 
