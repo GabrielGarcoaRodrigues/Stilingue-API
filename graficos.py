@@ -32,7 +32,6 @@ with col1:
 
 
 with col2:
-    st.write("### Resumo do estudo")
    
 
 col1, col2 = st.columns([1,4])
