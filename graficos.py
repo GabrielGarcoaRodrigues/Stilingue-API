@@ -13,10 +13,6 @@ st.markdown(
         .st-emotion-cache-1jicfl2 {
             padding: 3rem 5rem 3rem;
         }
-        img{
-            margin-left: 200%!important;
-            margin-top: -20px!important;
-        }
         h1 {
             text-decoration: underline;
         }
@@ -29,13 +25,13 @@ st.markdown(
 )
 
 
-col1, col2 = st.columns(2, vertical_alignment="top")
+col1, col2, col3, col4 = st.columns([6, 3, 3, 3])
 
 with col1:
     st.write("# Análise IA Stilingue")
 
 
-with col2:
+with col4:
     st.image("LOGO.png", width=200)
 
 
