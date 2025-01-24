@@ -13,12 +13,6 @@ st.markdown(
         .st-emotion-cache-1jicfl2 {
             padding: 3rem 5rem 3rem;
         }
-        img{
-            margin-left:20px;
-        }
-        ._profileContainer_gzau3_53{
-            display:none!important;
-        }
         h1 {
             text-decoration: underline;
         }
@@ -31,7 +25,7 @@ st.markdown(
 )
 
 
-col1, col2, col3, col4 = st.columns([6, 3, 3, 3])
+col1, col2, col3, col4 = st.columns([6, 2, 2, 2])
 
 with col1:
     st.write("# Análise IA Stilingue")
