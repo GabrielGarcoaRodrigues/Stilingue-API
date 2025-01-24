@@ -16,7 +16,9 @@ st.markdown(
         img{
             margin-left:20px;
         }
-        
+        button{
+            display:none!important;
+        }
         h1 {
             text-decoration: underline;
         }
