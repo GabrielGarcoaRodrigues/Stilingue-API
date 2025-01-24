@@ -13,6 +13,10 @@ st.markdown(
         .st-emotion-cache-1jicfl2 {
             padding: 3rem 5rem 3rem;
         }
+        img{
+            margin-left:20px;
+        }
+        
         h1 {
             text-decoration: underline;
         }
