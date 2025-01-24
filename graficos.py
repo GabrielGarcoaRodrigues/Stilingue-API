@@ -13,7 +13,7 @@ st.markdown(
         .st-emotion-cache-1jicfl2 {
             padding: 3rem 5rem 3rem;
         }
-        .st-emotion-cache-6gxzvh{
+        .stColumn .st-emotion-cache-1eoatk1 eiemyj2{
             padding-left: 70%!important;
             margin-top: -20px!important;
         }
