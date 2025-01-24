@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Análise IA Stilingue", page_icon=":bar_chart:", layout="wide")
 
