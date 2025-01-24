@@ -33,9 +33,7 @@ with col1:
 
 with col2:
     st.write("### Resumo do estudo")
-    st.write("O projeto utilizando a plataforma Stilingue, onde coleta comentários e utiliza o GPT para classificar esses comentários em temas e tags predefinidos. O objetivo principal é avaliar o desempenho da IA em comparação com a análise feita por um analista humano, medindo a precisão e eficiência da ferramenta automatizada em relação ao trabalho manual de um profissional. Isso ajuda a entender o potencial de automação no processo de categorização de dados de redes sociais e outros meios.")
-    st.write("Para a realização da análise, foram utilizados 146 comentários de redes sociais relacionados à marca Guaraná. A árvore de tags conta com 21 temas disponíveis para a classificação dos comentários e 190 tags.")
-
+   
 
 col1, col2 = st.columns([1,4])
 with col1:
