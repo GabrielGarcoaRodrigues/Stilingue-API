@@ -14,7 +14,7 @@ st.markdown(
             padding: 3rem 5rem 3rem;
         }
         img{
-            padding-left: 200%!important;
+            padding-left: 70%!important;
             margin-top: -20px!important;
         }
         h1 {
