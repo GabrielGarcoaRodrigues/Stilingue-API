@@ -16,7 +16,7 @@ st.markdown(
         img{
             margin-left:20px;
         }
-        button{
+        ._profileContainer_gzau3_53{
             display:none!important;
         }
         h1 {
